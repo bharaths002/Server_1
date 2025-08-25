@@ -40,7 +40,7 @@ router.post('/register', async (req, res) => {
             from: process.env.EMAIL_USER,
             to: user.email,
             subject: 'Please verify your email',
-            html: `<p>Click this link to verify your email: <a href="${process.env.BASE_URL}/verify/${verificationToken}">Verify Email</a></p>`,
+            html: `<p>Click this link to verify your email: <a href="${process.env.BASE_URL}/api/auth/verify/${verificationToken}">Verify Email</a></p>`,
         };
         await transporter.sendMail(mailOptions);
 
