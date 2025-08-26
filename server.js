@@ -6,7 +6,7 @@ import authRoutes from './routes/auth.js';
 
 const app = express();
 
-app.use(cors({ origin: 'https://client-1-lozp.onrender.com' })); //for deployment 
+app.use(cors({ origin: 'https://client-1-byov.onrender.com' })); //for deployment 
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
